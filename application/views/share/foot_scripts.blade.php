@@ -14,8 +14,4 @@
 <script>
 ga('create', 'UA-39783774-1', 'glonly.tw');
 ga('send', 'pageview');
-window.track = function(a,b,c,d){
-	_gaq.push(['_trackEvent', a, b, c]);
-	ga('send', 'event', a, b, c);
-}
 </script>
