@@ -8,7 +8,7 @@
 					<h1>《百年好合》2014 百合Only</h1>
 					<h2>"Love for All Seasons" 2014 Girls Love Festival</h2>
 					<ul>
-						<li>2014.03.08<br>（備用日期：2014.03.15）</li>
+						<li>2014.03.08</li>
 						<li>Y17台北市青少年育樂中心<br>二樓（展覽中心）</li>
 					</ul>
 				</div>
@@ -114,7 +114,7 @@
 										<div class="page-body-content">
 										<p>《百年好合》2014 百合Only</p>
 										<p class="small">"Love for All Seasons"<br>2014 Girls Love Festival</p>
-										<p class="small">2014.03.08（備用日期：2014.03.15）</p>
+										<p class="small">2014.03.08</p>
 										<p class="small">Y17台北市青少年育樂中心 二樓（展覽中心）</p>
 										<p class="small">台北市中正區仁愛路一段17號</p>
 										<p class="small">門票費用：新台幣 $150 元</p>
