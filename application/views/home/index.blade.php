@@ -114,9 +114,11 @@
 										<div class="page-body-content">
 										<p>《百年好合》2014 百合Only</p>
 										<p class="small">"Love for All Seasons"<br>2014 Girls Love Festival</p>
+										<hr>
 										<p class="small">活動日期：　　2014.03.08</p>
 										<p class="small">Y17台北市青少年育樂中心 二樓</p>
 										<p class="small">台北市中正區仁愛路一段17號</p>
+										<hr>
 										<p class="small">門票費用：新台幣 $150 元</p>
 										<p class="small">預計招募攤位數：　　60攤</p>
 										<p class="small">社團報名日期：　　　&nbsp;未定</p>
