@@ -24,6 +24,8 @@
 $environments = array(
 
 	'local' => array('http://localhost*', '*.dev'),
+  'stage' => array('*.stage.glonly.tw'),
+  'production' => array('glonly.tw', 'www.glonly.tw'),
 
 );
 

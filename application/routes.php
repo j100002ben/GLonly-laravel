@@ -106,7 +106,9 @@ Event::listen('500', function($exception)
 
 Route::filter('before', function()
 {
-	// Do stuff before every request to your application...
+	if( Request::env() == 'production' ) {
+		if( !Request::secure() ) return Redirect::to_secure(URI::current(), 301);
+	}
 });
 
 Route::filter('after', function($response)
