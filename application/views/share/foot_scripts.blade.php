@@ -1,0 +1,1 @@
+<script src="{{ asset('js/justfont-app.min.js') }}"></script>

@@ -1,0 +1,1 @@
+@include('share.modal_foot_scripts')
