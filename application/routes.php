@@ -107,7 +107,7 @@ Event::listen('500', function($exception)
 Route::filter('before', function()
 {
 	if( Request::env() == 'production' ) {
-		if( !Request::secure() ) return Redirect::to_secure(URI::current(), 301);
+		// if( !Request::secure() ) return Redirect::to_secure(URI::current(), 301);
 	}
 });
 
