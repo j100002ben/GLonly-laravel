@@ -191,6 +191,11 @@ body {
 	height: 100%;
 	opacity: 0;
 	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
 	-webkit-transition: opacity 1s ease-in-out;
 	-moz-transition: opacity 1s ease-in-out;
 	-o-transition: opacity 1s ease-in-out;
@@ -396,8 +401,7 @@ body {
 
 #event-page {
 	border-bottom: 3px solid rgba(0,0,0, 0.8);
-	background: transparent url(../img/bg/menu1-2040-40.jpg) scroll no-repeat 50% 50%;
-	background-size: cover;
+	background: transparent url(../img/bg/menu1-2040-40.jpg) fixed no-repeat 50% 50%;
 	
 	.page-content-inner {
 		width: 100%;
@@ -428,8 +432,7 @@ body {
 
 #circle-page {
 	border-bottom: 3px solid rgba(0,0,0, 0.8);
-	background: transparent url(../img/bg/menu3-2040-40.jpg) scroll no-repeat 50% 50%;
-	background-size: cover;
+	background: transparent url(../img/bg/menu3-2040-40.jpg) fixed no-repeat 50% 50%;
 	
 	.page-menu-inner {
 		position: relative;
