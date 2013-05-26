@@ -9,11 +9,11 @@
 <h2>"Love for All Seasons" 2014 Girls Love Festival</h2>
 <div class="info">
 	<ul>
-		<li>活動時間：</li>
-		<li>活動地點：</li>
-		<li>地址：</li>
-		<li>募集攤位數：</li>
-		<li>一般入場費：</li>
+		<li>活動時間：2014.03.08</li>
+		<li>活動地點：Y17台北市青少年育樂中心 二樓</li>
+		<li>地址：台北市中正區仁愛路一段17號</li>
+		<li>募集攤位數：60攤</li>
+		<li>一般入場費：新台幣 $150 元</li>
 	</ul>
 </div>
 <p class="copyright">All rights reserved. &copy; 百合Only籌備處 2013</p>

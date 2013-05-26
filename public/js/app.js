@@ -106,6 +106,7 @@
 					if( page_animate ) return false;
 					page_animate = true;
 					$(this).closest('.page-content').removeClass('static');
+					$page_group.removeClass('static');
 					setTimeout(function(){
 						$page_group.css('left', '100%');
 						GLonly.data.current_group = GLonly.data.current_page = '';
@@ -144,8 +145,9 @@
 					if( $this.attr('href') == '#construstion' ) return false;
 					switch(page_id){
 						case "event-page":
+						case "circle-page":
 							GLonly.data.current_group = page_id;
-							$page_group.css('left', '0px');
+							$page_group.css('left', '0px').addClass('static');
 							$('#'+page_id).addClass('static');
 							GLonly.events.trigger_page(page_target);
 							break;

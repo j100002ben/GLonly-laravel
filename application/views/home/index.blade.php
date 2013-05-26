@@ -60,7 +60,7 @@
 								</div>
 								<div class="list">
 									<ul class="menu-sublist">
-										<li><a class="list" href="{{ url('circle') }}">報名須知</a></li>
+										<li><a page-id="circle-page" page-target="circle-info" class="list" href="{{ url('circle') }}">報名須知</a></li>
 										<li><a class="list" href="#construstion">社團規範</a></li>
 										<li><a class="list" href="#construstion">社團名單</a></li>
 										<li><a class="list" href="#construstion">攤位地圖</a></li>
@@ -87,7 +87,7 @@
 					</nav>
 				</div>
 			</div>
-			<div id="page-group">
+			<div id="page-group"><div id="page-group-inner">
 				<div id="event-page" class="page-content">
 					<div class="page-content-inner">
 						<div class="page-menu">
@@ -145,12 +145,44 @@
 						</div>
 					</div>
 				</div>
-				<div class="circle-content">
-					<div class="circle-inner-content">
-						
+				<div id="circle-page" class="page-content">
+					<div class="page-content-inner">
+						<div class="page-menu">
+							<div class="page-menu-inner">
+								<a class="page-header-back" href="#">
+									Back
+									<span class="gicon-arrow-arrow-left"></span>
+								</a>
+								<ul class="page-menu-list">
+									<li class="circle-info active"><a class="list" page-target="circle-info" href="{{ url('circle') }}">報名須知</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-background"></div>
+						<div class="page-container active" id="circle-info">
+							<div class="page-header">
+								<h3>社團報名須知</h3>
+							</div>
+							<div class="page-body">
+								<div class="page-body-wrapper">
+									<div class="page-body-inner">
+										<div class="page-body-content">
+										<p>本場僅限販售描寫女性間情感之作品或週邊。<br>（如果有定義不明確的問題，請向主辦單位做確認）</p>
+										<ul>
+											<li class="small">募集攤位數：60攤。</li>
+											<li class="small">每一攤位入場人數：3人（兩人需購買場刊）。</li>
+											<li class="small">錄取方式：滿額抽籤制。</li>
+											<li class="small">報名連結（報名開始後公布）。</li>
+											<li class="small">限制級作品請在封面標示為「18禁」（或向主辦單位索取18禁貼紙），亦禁止販賣給未成年，且見本不得展示出18禁內容。</li>
+											<li class="small">禁止販售二手作品與非自創作品，若要販售非自創作品之社團需要取得原作授權並向主辦單位報備證明。</li>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</div></div>
 			<div id="drawings-group">
 				<div id="drawings-group-inner">
 					
