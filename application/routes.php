@@ -38,6 +38,12 @@ Route::get('/', function()
 		->with('page_title', '');
 });
 
+Route::get('/news', function()
+{
+	return View::make('home.news')
+		->with('page_title', '');
+});
+
 Route::get('/credit', function()
 {
 	return View::make('home.credit')

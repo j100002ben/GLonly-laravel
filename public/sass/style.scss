@@ -98,9 +98,36 @@ body {
 
 #plurk-box {
 	position: absolute;
-	z-index: 100;
+	z-index: 75;
 	bottom: 30px;
 	right: 20px;
+	height: 57px;
+	width: 250px;
+	border: 2px solid rgba(255,255,255,0.5);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px rgba(0,0,0, 0.5), -2px 2px 10px rgba(0,0,0, 0.5);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	opacity: 0.5;
+	overflow: hidden;
+	
+	&.hover,
+	&:hover {
+		height: 375px;
+		opacity: 1;
+	}
+}
+
+#news-box {
+	position: absolute;
+	z-index: 75;
+	bottom: 30px;
+	left: 20px;
 	height: 57px;
 	width: 250px;
 	border: 2px solid rgba(255,255,255,0.5);
