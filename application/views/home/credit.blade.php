@@ -14,7 +14,7 @@
 				<h4>竹筍</h4>
 				<p>
 					<img class="logo blank" src="img/blank.gif" alt="">
-					<a class="link" href="http://bsparty.blogspot.tw/" target="_blank">www.pixiv.net/member.php?id=1199389</a>
+					<a class="link" href="http://bsparty.blogspot.tw/" target="_blank">bsparty.blogspot.tw/</a>
 					活動資訊 Drawings by 竹筍</p>
 				<h4>悠炎</h4>
 				<p>
@@ -24,7 +24,7 @@
 				<h4>leo的第19日</h4>
 				<p>
 					<img class="logo blank" src="img/blank.gif" alt="">
-					<a class="link" href="http://www.weibo.com/u/1922111114" target="_blank">www.pixiv.net/member.php?id=1199389</a>
+					<a class="link" href="http://www.weibo.com/u/1922111114" target="_blank">www.weibo.com/u/1922111114</a>
 					參與規範&amp;特別企劃 Drawings by leo的第19日</p>
 				<h4>justfont就是字</h4>
 				<p>
