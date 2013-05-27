@@ -11,11 +11,21 @@
 					<img class="logo blank" src="img/blank.gif" alt="">
 					<a class="link" href="http://www.plurk.com/j100002ben" target="_blank">www.plurk.com/j100002ben</a>
 					Site by Poka</p>
+				<h4>竹筍</h4>
+				<p>
+					<img class="logo blank" src="img/blank.gif" alt="">
+					<a class="link" href="http://bsparty.blogspot.tw/" target="_blank">www.pixiv.net/member.php?id=1199389</a>
+					活動資訊 Drawings by 竹筍</p>
 				<h4>悠炎</h4>
 				<p>
 					<img class="logo blank" src="img/blank.gif" alt="">
 					<a class="link" href="http://www.pixiv.net/member.php?id=1199389" target="_blank">www.pixiv.net/member.php?id=1199389</a>
-					Drawings by 悠炎</p>
+					社團資訊 Drawings by 悠炎</p>
+				<h4>leo的第19日</h4>
+				<p>
+					<img class="logo blank" src="img/blank.gif" alt="">
+					<a class="link" href="http://www.weibo.com/u/1922111114" target="_blank">www.pixiv.net/member.php?id=1199389</a>
+					參與規範&特別企劃 Drawings by leo的第19日</p>
 				<h4>justfont就是字</h4>
 				<p>
 					<img class="logo" src="img/logo/jf-logo.png" alt="justfont就是字 Logo">
