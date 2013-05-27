@@ -51,9 +51,8 @@
 								</div>
 								<div class="list">
 									<ul class="menu-sublist">
-										<li><a class="list" href="#construstion">活動守則</a></li>
-										<li><a class="list" href="#construstion">一般參加者</a></li>
-										<li><a class="list" href="#construstion">Cosplayer</a></li>
+										<li><a page-id="rule-page" page-target="rule-info" class="list" href="{{ url('rule') }}">活動守則</a></li>
+										<li><a page-id="rule-page" page-target="rule-cosplayer" class="list" href="{{ url('rule/cosplayer') }}">Cosplayer</a></li>
 									</ul>
 								</div>
 							</li>
@@ -181,6 +180,71 @@
 											<li class="small">報名連結（報名開始後公布）。</li>
 											<li class="small">限制級作品請在封面標示為「18禁」（或向主辦單位索取18禁貼紙），亦禁止販賣給未成年，且見本不得展示出18禁內容。</li>
 											<li class="small">禁止販售二手作品與非自創作品，若要販售非自創作品之社團需要取得原作授權並向主辦單位報備證明。</li>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="rule-page" class="page-content">
+					<div class="page-content-inner">
+						<div class="page-menu">
+							<div class="page-menu-inner">
+								<a class="page-header-back" href="#">
+									Back
+									<span class="gicon-arrow-arrow-left"></span>
+								</a>
+								<ul class="page-menu-list">
+									<li class="rule-cosplayer"><a class="list" page-target="rule-cosplayer" href="{{ url('rule/cosplayer') }}">Cosplayer</a></li>
+									<li class="rule-info active"><a class="list" page-target="rule-info" href="{{ url('rule') }}">活動守則</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-background"></div>
+						<div class="page-container active" id="rule-info">
+							<div class="page-header">
+								<h3>活動守則</h3>
+							</div>
+							<div class="page-body">
+								<div class="page-body-wrapper">
+									<div class="page-body-inner">
+										<div class="page-body-content">
+										<p class="alert">※ 禁止在早上8:00前至活動場地排隊<br>為了大家的安全著想請勿夜排！</p>
+										<hr>
+										<p class="title">注意事項</p>
+										<ul>
+											<li class="small">※ 請勿隨意亂丟垃圾，保持環境整潔。</li>
+											<li class="small">※ 同好交流時請保持禮貌，並請自備零錢，禁止討價還價。</li>
+											<li class="small">※ 出入會場時請自動出示手章。</li>
+											<li class="small">※ 嚴禁所有違反法律的不當行為，如：暴力、偷竊、性騷擾等。</li>
+											<li class="small">※ 會場內禁止奔跑、揮動或投擲道具等危險行為，請注意您腳下的百合花。</li>
+											<li class="small">※ 請勿在場內吸菸喝酒，禁止攜帶危險物品及寵物。</li>
+											<li class="small">※ 未開放的區域請勿擅闖。</li>
+											<li class="small">※ 請勿在會場內外大聲喧嘩、進行任何未經總部同意之表演節目，或任何會製造噪音的行為。</li>
+											<li class="small">※ 請遵從工作人員指示，如有緊急情況請尋求工作人員或總部協助。</li>
+										</ul>
+										<hr>
+										<p class="title"> 攝影須知</p>
+										<ul>
+											<li class="small">※ 拍照攝影前，請先取得當事人同意。</li>
+											<li class="small">※ 請勿為難執勤中的工作人員強迫拍照。</li>
+											<li class="small">※ 禁止在攤位區拍照與聚集以維護動線順暢，社團自行記錄活動實況不在此限，但請勿佔用走道；另外未徵得社團同意禁止拍攝社團攤位。</li>
+										</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="page-container active" id="rule-cosplayer">
+							<div class="page-header">
+								<h3>Cosplayer 守則</h3>
+							</div>
+							<div class="page-body">
+								<div class="page-body-wrapper">
+									<div class="page-body-inner">
+										<div class="page-body-content">
+										<p class="alert">目前尚在評估、規劃Cosplayer入場相關事宜。</p>
 										</div>
 									</div>
 								</div>

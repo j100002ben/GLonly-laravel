@@ -258,6 +258,7 @@ body {
 	
 	&.static {
 		opacity: 1;
+		top: 0;
 	}
 }
 
@@ -321,7 +322,8 @@ body {
 		}
 		
 		&.event-info,
-		&.circle-info {
+		&.circle-info,
+		&.rule-info {
 			border-bottom: 5px solid red;
 			
 			&.active,
@@ -330,7 +332,8 @@ body {
 			}
 		}
 		
-		&.event-ticket {
+		&.event-ticket,
+		&.rule-cosplayer {
 			border-bottom: 5px solid orange;
 			
 			&.active,
@@ -366,9 +369,11 @@ body {
 	transition: opacity 0.5s ease-in-out;
 	
 	opacity: 0;
+	visibility: hidden;
 	
 	&.active {
 		opacity: 1;
+		visibility: visible;
 	}
 }
 
@@ -534,6 +539,63 @@ body {
 		width: 500px;
 		height: 120%;
 		padding-bottom: 10%;
+	}
+}
+
+#rule-page {
+	border-bottom: 3px solid rgba(0,0,0, 0.8);
+	background: transparent url(../img/bg/menu2-2040-40.jpg) fixed no-repeat 50% 50%;
+	
+	.page-menu-inner {
+		position: relative;
+		right: 5%;
+		padding: 10px 745px 10px 0px;
+	}
+	
+	.page-menu-list {
+		text-align: right;
+	}
+	
+	.page-header-back{
+		right: 655px;
+		left: auto;
+		
+		span {
+			transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
+			display: inline-block;
+		}
+	}
+	
+	.page-content-inner {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,0.4);
+	}
+	
+	.page-background {
+		right: 5%;
+		top: -30px;
+		width: 510px;
+		height: 120%;
+		box-shadow: 0px 0px 12px 4px rgba(20%,20%,40%,0.5);
+		transform: rotate(5deg);
+		-ms-transform: rotate(5deg);
+		-webkit-transform: rotate(5deg);
+	}
+	
+	.page-container {
+		
+		right: 5%;
+		top: -30px;
+		width: 500px;
+		height: 120%;
+		padding-bottom: 10%;
+	}
+	
+	.page-body-content {
+		padding-right: 10px;
 	}
 }
 
@@ -778,6 +840,10 @@ body {
 		
 		ul.menu-sublist {
 			height: 30px;
+			
+			li {
+				width: 50%;
+			}
 		}
 		
 		&.static,
@@ -1188,3 +1254,32 @@ body.modal-body {
 	}
 }
 
+#rule-info,
+#rule-cosplayer {
+	p {
+		font-size: 14px;
+		letter-spacing: 2px;
+		text-align: center;
+		
+		&.alert {
+			color: red;
+		}
+		&.title {
+			font-size: 1.1em;
+			font-weight: bold;
+			margin: 15px auto 5px;
+		}
+	}
+	
+	ul {
+		margin-bottom: 20px;
+		list-style: none;
+		font-size: 14px;
+		letter-spacing: 2px;
+		padding-left: 40px;
+		
+		li {
+			text-indent: -20px;
+		}
+	}
+}

@@ -146,6 +146,7 @@
 					switch(page_id){
 						case "event-page":
 						case "circle-page":
+						case "rule-page":
 							GLonly.data.current_group = page_id;
 							$page_group.css('left', '0px').addClass('static');
 							$('#'+page_id).addClass('static');
