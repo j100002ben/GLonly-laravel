@@ -76,7 +76,7 @@
         <div id="content"> 
             <div class="message">
                 <div class="body">
-                    網站公開上線網站公開上線。
+                    網站公開上線。
                 </div>
                 <div class="date">2013.05.28</div>
             </div>
