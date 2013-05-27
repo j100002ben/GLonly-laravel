@@ -14,6 +14,9 @@
 				</div>
 			</div>
 		</header>
+		<div id="plurk-box">
+			<iframe src="http://www.plurk.com/getWidget?uid=9454703&amp;h=375&amp;w=250&amp;u_info=2&amp;bg=cf682f&amp;tl=cae7fd" width="250" frameborder="0" height="375" scrolling="no"></iframe>
+		</div>
 		<div id="body">
 			<div id="menu-group">
 				<div id="menu-group-inner">
