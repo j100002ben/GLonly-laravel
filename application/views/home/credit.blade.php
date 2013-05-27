@@ -25,7 +25,7 @@
 				<p>
 					<img class="logo blank" src="img/blank.gif" alt="">
 					<a class="link" href="http://www.weibo.com/u/1922111114" target="_blank">www.pixiv.net/member.php?id=1199389</a>
-					參與規範&特別企劃 Drawings by leo的第19日</p>
+					參與規範&amp;特別企劃 Drawings by leo的第19日</p>
 				<h4>justfont就是字</h4>
 				<p>
 					<img class="logo" src="img/logo/jf-logo.png" alt="justfont就是字 Logo">
