@@ -213,6 +213,8 @@
 						default:
 							break;
 					}
+					e.preventDefault();
+					e.stopPropagation();
 					return false;
 			  	});
 			  	$('a[href="#construstion"]').on('click', function(e){
