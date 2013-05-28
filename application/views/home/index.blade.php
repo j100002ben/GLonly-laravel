@@ -174,7 +174,8 @@
 										<div class="page-body-content">
 										<p>本場僅限販售描寫女性間情感之作品或週邊。<br>（如果有定義不明確的問題，請向主辦單位做確認）</p>
 										<ul>
-											<li class="small">募集攤位數：60攤。</li>
+											<li class="small">募集攤位數：60 攤。</li>
+											<li class="small">攤位費用：一攤新台幣 $400 元。</li>
 											<li class="small">每一攤位入場人數：3人（兩人需購買場刊）。</li>
 											<li class="small">錄取方式：滿額抽籤制。</li>
 											<li class="small">報名連結（報名開始後公布）。</li>

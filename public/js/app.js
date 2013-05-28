@@ -102,6 +102,25 @@
 					e.stopPropagation();
 				});
 				$(document.body).css('overflow', 'hidden');
+				$('a[rel="fancybox-iframe"]').click(function(e){
+			  		$.fancybox.open({
+						href : $(this).attr('href'),
+						type : 'iframe',
+						padding : 5,
+						maxWidth	: 800,
+						maxHeight	: 600,
+						fitToView	: false,
+						width		: '70%',
+						height		: '70%',
+						autoSize	: false,
+						closeClick	: true,
+						afterShow	: GLonly.modal_loaded,
+						onUpdate	: GLonly.modal_loaded
+					});
+			  		e.preventDefault();
+					e.stopPropagation();
+			  		return false;
+			  	});
 				$('a.page-header-back').on('click', function(){
 					if( page_animate ) return false;
 					page_animate = true;
@@ -169,6 +188,48 @@
 			},
 		traditional_page: function(){
 		  		console.log('exec init traditional page');
+		  		$('a[rel="fancybox-iframe"]').click(function(e){
+		  			window.open($(this).attr('href'),'openwindow','width=800,height=600,copyhistory=no,menubar=no,directories=no,toolbar=no')
+			  		e.preventDefault();
+					e.stopPropagation();
+			  		return false;
+			  	});
+			  	var id = $('.page-container').hide().first().show().attr('id');
+			  	GLonly.data.current_page = id;
+			  	$('#menu-list a').on('click', function(e){
+			  		var $this = $(this)
+					  , page_id = $this.attr('page-id')
+					  , page_target = $this.attr('page-target')
+					  ;
+					if( $this.attr('href') == '#construstion' ) return false;
+					switch(page_id){
+						case "event-page":
+						case "circle-page":
+						case "rule-page":
+							GLonly.data.current_page = page_target;
+							$('.page-container').hide();
+							$('#'+page_target).show();
+							break;
+						default:
+							break;
+					}
+					return false;
+			  	});
+			  	$('a[href="#construstion"]').on('click', function(e){
+					$.fancybox.open({
+						href : $(this).attr('href'),
+						type : 'inline',
+						padding : 10,
+						width		: '100%',
+						height		: '100%',
+						autoSize	: true,
+						closeClick	: true,
+						hideOnContentClick: true
+					});
+			  		e.preventDefault();
+					e.stopPropagation();
+					return false;
+				});
 			},
 		draw_line: function(callback){
 				callback = callback || function(){};
@@ -268,32 +329,19 @@
 				point_animate_seq(right_bottom_paths, right_bottom_points, 0);
 			},
 		ie_page: function(){
-		  		
+		  		$('#plurk-box, #news-box').on('mouseenter', function(){
+					$(this).addClass('hover');
+				}).on('mouseleave', function(){
+					$(this).removeClass('hover');
+				}).children('iframe').on('hover',function(){
+					$(this).parent().addClass('hover');
+				});
 			}
 	};
 	$(function(){
-		GLonly.resize_window();
-	  	$(window).resize(GLonly.resize_window);
-	  	$('a[rel="fancybox-iframe"]').click(function(e){
-	  		$.fancybox.open({
-				href : $(this).attr('href'),
-				type : 'iframe',
-				padding : 5,
-				maxWidth	: 800,
-				maxHeight	: 600,
-				fitToView	: false,
-				width		: '70%',
-				height		: '70%',
-				autoSize	: false,
-				closeClick	: true,
-				afterShow	: GLonly.modal_loaded,
-				onUpdate	: GLonly.modal_loaded
-			});
-	  		e.preventDefault();
-			e.stopPropagation();
-	  		return false;
-	  	});
-		if( $.fn.jquery == '2.0.0' ){
+		if( ieflag.normal ){
+			GLonly.resize_window();
+	  		$(window).resize(GLonly.resize_window);
 			GLonly.init.page.call(this);
 		}else{
 			GLonly.init.traditional_page.call(this);
