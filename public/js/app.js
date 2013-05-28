@@ -341,6 +341,22 @@
 			}
 	};
 	$(function(){
+		$('a[rel="fancybox-image"]').click(function(e){
+	  		$.fancybox.open({
+				href : $(this).attr('href'),
+				maxWidth	: 800,
+				maxHeight	: 600,
+				fitToView	: false,
+				width		: '70%',
+				height		: '70%',
+				autoSize	: false,
+				closeClick	: true,
+				overlayColor: '#000'
+			});
+	  		e.preventDefault();
+			e.stopPropagation();
+	  		return false;
+	  	});
 		if( ieflag.normal ){
 			GLonly.resize_window();
 	  		$(window).resize(GLonly.resize_window);

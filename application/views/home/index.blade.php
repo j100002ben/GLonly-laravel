@@ -181,7 +181,7 @@
 											<li class="small">報名連結（報名開始後公布）。</li>
 											<li class="small">限制級作品請在封面標示為「18禁」（或向主辦單位索取18禁貼紙），亦禁止販賣給未成年，且見本不得展示出18禁內容。</li>
 											<li class="small">禁止販售二手作品與非自創作品，若要販售非自創作品之社團需要取得原作授權並向主辦單位報備證明。</li>
-											<li class="small">報名流程圖：（點擊新視窗開啟）<br><a href="{{ asset('img/circle-flow.png') }}" target="_blank"><img style="width:90%;" src="{{ asset('img/circle-flow.png') }}"></a></li>
+											<li class="small">報名流程圖：<br><a rel="fancybox-image" href="{{ asset('img/circle-flow.png') }}" target="_blank"><img style="width:90%;" src="{{ asset('img/circle-flow.png') }}"></a></li>
 										</div>
 									</div>
 								</div>
