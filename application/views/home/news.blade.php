@@ -79,7 +79,7 @@
                 <div class="body">
                     1. 修正社團規範「非自創作品」敘述。<br>
                     2. 公布社團報名開始日期： 2013.08.01<br>
-                    3. 開通 https 連結，大陸地區可以使用 <a href="https://www.glonly.tw/">https://www.glonly.tw/</a>瀏覽網頁，惟部分樣式及噗浪區塊會因為安全性設定無法載入。
+                    3. 開通 https 連結，大陸地區可以使用 <a target="_top" href="https://www.glonly.tw/">https://www.glonly.tw/</a>瀏覽網頁，惟部分樣式及噗浪區塊會因為安全性設定無法載入。
                 </div>
                 <div class="date">2013.05.29</div>
             </div>
