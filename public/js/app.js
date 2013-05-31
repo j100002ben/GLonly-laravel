@@ -6,7 +6,7 @@
 	  , html_class = document.getElementsByTagName('html')[0].className
 	  , ieflag = {
 			normal: ! /lte-ie9/i.test(html_class),
-			ie: /*@cc_on!@*/false,
+			ie: !! window.ActiveXObject,
 			ie9: /is-ie9/i.test(html_class),
 			ie8: /is-ie8/i.test(html_class),
 			lteie9: /lte-ie9/i.test(html_class),
