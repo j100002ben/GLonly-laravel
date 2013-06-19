@@ -33,7 +33,7 @@ if (!function_exists('checkdnsrr')) {
 |
 */
 
-ini_set('display_errors', 'On');
+//ini_set('display_errors', 'On');
 
 /*
 |--------------------------------------------------------------------------
