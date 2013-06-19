@@ -9,11 +9,11 @@
 	<link rel="shortcut icon" href="{{ asset('img/icon/favicon-64.png') }}" type="image/png">
 	<link rel="shortcut icon" type="image/png" href="{{ asset('img/icon/favicon-64.png') }}" />
 	<!--[if lte IE 9]>
-		<link href="{{ asset('css/ie.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/ie.css') }}?t=20130619" rel="stylesheet">
 	<![endif]-->
 	<!--[if IE 10]><!-->
 		<link href="{{ asset('css/glonly-icon-arrow.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/style.css') }}?t=20130619" rel="stylesheet">
 	<!--<![endif]-->
 	@include('share.head_scripts')
 </head>

@@ -1,9 +1,9 @@
 <!--[if IE 8]>
-	<script src="{{ asset('js/ie8.min.js') }}"></script>
+	<script src="{{ asset('js/ie8.min.js') }}?t=20130619"></script>
 <![endif]-->
-<!--[if gte IE 9]><!--><script src="{{ asset('js/normal.min.js') }}"></script><!--<![endif]-->
+<!--[if gte IE 9]><!--><script src="{{ asset('js/normal.min.js') }}?t=20130619"></script><!--<![endif]-->
 <!--[if gte IE 8]><!-->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}?t=20130619"></script>
 <!--<![endif]-->
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

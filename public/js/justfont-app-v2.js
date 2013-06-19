@@ -116,4 +116,4 @@ _jf.push(['_eventInactived',function(){
 		triggerEvent('_eventInactived');
 	});
 	
-})(this, this.document, 'className', 'classList', '/js/justfont-stable-1.13.js');
+})(this, this.document, 'className', 'classList', '/js/justfont-stable-1.13.js?t=20130619');

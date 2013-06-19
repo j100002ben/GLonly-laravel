@@ -9,6 +9,6 @@
 	<link rel="shortcut icon" href="{{ asset('img/icon/favicon-64.png') }}" type="image/png">
 	<link rel="shortcut icon" type="image/png" href="{{ asset('img/icon/favicon-64.png') }}" />
 	
-	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/style.css') }}?t=20130619" rel="stylesheet">
 	@include('share.modal_head_scripts')
 </head>
