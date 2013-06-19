@@ -36,4 +36,5 @@
 return array(
     'swiftmailer' => array('auto' => true),
     'cloudflare' => array('auto' => true),
+    'recaptcha' => array('auto' => true),
 );

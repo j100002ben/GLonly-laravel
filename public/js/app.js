@@ -1,4 +1,5 @@
 ;"use strict";
+var _jf = _jf || [];
 (function(window, undefined){
 	var document = window.document
 	  , $ = window.jQuery
@@ -82,7 +83,30 @@
 		}
 	};
 	GLonly.network = {
-		
+		guestbook: function(){
+			$.ajax({
+				url: "/guestbook/list",
+				dataType: "json"
+			}).done(function(data) {
+				var str = '', gb_tjscroll;
+				for(var i in data){
+					str += '<div class="guest-group"> <div class="guest-post"> <div class="guest-post-title">';
+					str += data[i].post_title;
+					str += '</div> <div class="guest-post-body">';
+					str += data[i].post_body;
+					str += '</div> <hr class="guest-hr"> <div class="guest-post-info"> <div class="left"> <i>';
+					str += data[i].post_nickname;
+					str += '</i> </div> <div class="right">';
+					str += data[i].created_at;
+					str += '</div> <div class="right"> <a class="reply" href="/guestbook/post/' + data[i].id + '">查看回應(';
+					str += data[i].reply_num + ')</a> - </div> </div> </div> </div> ';
+				}
+				$('#guestbook-list-inner').html(str);
+				if( gb_tjscroll = $('#guestbook-list-group').data('TJScroll') ){
+					gb_tjscroll.refresh.call(gb_tjscroll);
+				}
+			});
+		}
 	};
 	GLonly.start = function(){
 		GLonly.init.draw_line.call(GLonly, function(){
@@ -96,6 +120,9 @@
 		  		  , $wrapper = $('#wrapper')
 		  		  , $page_group = $('#page-group')
 		  		  , page_animate = false
+		  		  , start_func = function(){
+		  		  		GLonly.start.call(GLonly);
+					}
 		  		  ;
 		  		$(document).on('touchmove', function(e) { 
 					e.preventDefault();
@@ -179,12 +206,8 @@
 				if(ieflag.ie){
 					GLonly.init.ie_page.call(this);
 				}
-				setTimeout(function(){
-					if( $('html').hasClass('jf-loading') ){
-						return setTimeout(arguments.callee,1000/30);
-					}
-					GLonly.start.call(GLonly);
-				},1000/30);
+				_jf.push(['_eventActived',start_func]);
+				_jf.push(['_eventInactived',start_func]);
 			},
 		traditional_page: function(){
 		  		console.log('exec init traditional page');
@@ -196,6 +219,84 @@
 			  	});
 			  	var id = $('.page-container').hide().first().show().attr('id');
 			  	GLonly.data.current_page = id;
+			  	$(window).on('message', function(e){
+					var event = e.originalEvent;
+					if (event.origin !== window.location.origin) return;
+					if( event.data == 'guestbook-refresh' ){
+						GLonly.network.guestbook.call(GLonly.network);
+						$.fancybox.close();
+					}else if( event.data == 'guestbook-reload' ){
+						GLonly.network.guestbook.call(GLonly.network);
+					}
+				})
+			  	$('#guestbook').prependTo($('body'));
+			  	var old_position, gb_tjscroll, $gb_list = $('#guestbook-list-group');
+				$gb_list.TJScroll({
+					enabled:true,
+					hScroll:false,
+					vScroll:true,
+					hScrollbar:false,
+					vScrollbar:true,
+					bounceLock: true
+				});
+			  	$('#menu-list li.list-guestbook').on('click', function(e){
+			  		if( gb_tjscroll = $gb_list.data('TJScroll') ){
+						gb_tjscroll.refresh.call(gb_tjscroll);
+					}
+					GLonly.network.guestbook.call(GLonly.network);
+					$('#guestbook').addClass('active');
+					old_position = $('html').scrollTop();
+					$('html').scrollTop(0);
+					$('body').css('overflow', 'hidden');
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+			  	});
+			  	$('#guestbook-link > a.back').on('click', function(){
+					$('#guestbook').removeClass('active');
+					$('body').css('overflow', 'visible');
+					$('html').scrollTop(old_position);
+					return false;
+				});
+				$('#guestbook-link > a.new').on('click', function(e){
+					$.fancybox.open({
+						href : $(this).attr('href'),
+						type : 'iframe',
+						padding : 5,
+						maxWidth	: 800,
+						maxHeight	: 600,
+						fitToView	: false,
+						width		: '500px',
+						height		: '90%',
+						autoSize	: false,
+						closeClick	: true,
+						afterShow	: GLonly.modal_loaded,
+						onUpdate	: GLonly.modal_loaded
+					});
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				});
+				$('#guestbook-list-inner').on('click', 'a.reply', function(e){
+					$.fancybox.open({
+						href : $(this).attr('href'),
+						type : 'iframe',
+						padding : 5,
+						maxWidth	: 800,
+						maxHeight	: 600,
+						fitToView	: false,
+						width		: '500px',
+						height		: '90%',
+						autoSize	: false,
+						closeClick	: true,
+						afterShow	: GLonly.modal_loaded,
+						onUpdate	: GLonly.modal_loaded
+					});
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				});
+				GLonly.network.guestbook.call(GLonly.network);
 			  	$('#menu-list a').on('click', function(e){
 			  		var $this = $(this)
 					  , page_id = $this.attr('page-id')
@@ -338,6 +439,78 @@
 				}).children('iframe').on('hover',function(){
 					$(this).parent().addClass('hover');
 				});
+			},
+		guestbook: function(){
+				var gb_tjscroll, $gb_list = $('#guestbook-list-group');
+				$(window).on('message', function(e){
+					var event = e.originalEvent;
+					if (event.origin !== window.location.origin) return;
+					if( event.data == 'guestbook-refresh' ){
+						GLonly.network.guestbook.call(GLonly.network);
+						$.fancybox.close();
+					}else if( event.data == 'guestbook-reload' ){
+						GLonly.network.guestbook.call(GLonly.network);
+					}
+				})
+				$gb_list.TJScroll({
+					enabled:true,
+					hScroll:false,
+					vScroll:true,
+					hScrollbar:false,
+					vScrollbar:true,
+					bounceLock: true
+				});
+				$('#guestbook-ribbon').on('click', function(){
+					if( gb_tjscroll = $gb_list.data('TJScroll') ){
+						gb_tjscroll.refresh.call(gb_tjscroll);
+					}
+					GLonly.network.guestbook.call(GLonly.network);
+					$('#guestbook').addClass('active');
+					return false;
+				});
+				$('#guestbook-link > a.back').on('click', function(){
+					$('#guestbook').removeClass('active');
+					return false;
+				});
+				$('#guestbook-link > a.new').on('click', function(e){
+					$.fancybox.open({
+						href : $(this).attr('href'),
+						type : 'iframe',
+						padding : 5,
+						maxWidth	: 800,
+						maxHeight	: 600,
+						fitToView	: false,
+						width		: '500px',
+						height		: '90%',
+						autoSize	: false,
+						closeClick	: true,
+						afterShow	: GLonly.modal_loaded,
+						onUpdate	: GLonly.modal_loaded
+					});
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				});
+				$('#guestbook-list-inner').on('click', 'a.reply', function(e){
+					$.fancybox.open({
+						href : $(this).attr('href'),
+						type : 'iframe',
+						padding : 5,
+						maxWidth	: 800,
+						maxHeight	: 600,
+						fitToView	: false,
+						width		: '500px',
+						height		: '90%',
+						autoSize	: false,
+						closeClick	: true,
+						afterShow	: GLonly.modal_loaded,
+						onUpdate	: GLonly.modal_loaded
+					});
+					e.preventDefault();
+					e.stopPropagation();
+					return false;
+				});
+				GLonly.network.guestbook.call(GLonly.network);
 			}
 	};
 	$(function(){
@@ -361,6 +534,7 @@
 			GLonly.resize_window();
 	  		$(window).resize(GLonly.resize_window);
 			GLonly.init.page.call(this);
+			GLonly.init.guestbook.call(this);
 		}else{
 			GLonly.init.traditional_page.call(this);
 		}

@@ -38,19 +38,46 @@ Route::get('/', function()
 		->with('page_title', '');
 });
 
-Route::get('/news', function()
+Route::get('news', function()
 {
 	return View::make('home.news')
 		->with('page_title', '');
 });
 
-Route::get('/credit', function()
+Route::get('guestbook/list', 'guestbook@list');
+
+Route::get('guestbook/post/reply/(:num)', function($post_id)
+{
+	return View::make('guestbook.reply-new')
+		->with('post_id', $post_id)
+		->with('page_title', '');
+});
+
+Route::post('guestbook/post/reply/(:num)', 'guestbook@reply_new');
+
+Route::get('guestbook/post/(:num)', 'guestbook@post');
+
+Route::get('guestbook/new', function()
+{
+	return View::make('guestbook.new')
+		->with('page_title', '');
+});
+
+Route::get('guestbook/success', function()
+{
+	return View::make('guestbook.success')
+		->with('page_title', '');
+});
+
+Route::post('guestbook/new', 'guestbook@new');
+
+Route::get('credit', function()
 {
 	return View::make('home.credit')
 		->with('page_title', '');
 });
 
-Route::get('/privacy', function()
+Route::get('privacy', function()
 {
 	return View::make('home.privacy')
 		->with('page_title', '');

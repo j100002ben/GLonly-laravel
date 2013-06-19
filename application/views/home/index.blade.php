@@ -20,6 +20,9 @@
 		<div id="news-box">
 			<iframe src="{{ url('news') }}" width="250" frameborder="0" height="375" scrolling="no"></iframe>
 		</div>
+		<div id="guestbook-ribbon">
+			<img class="ribbon" src="{{ asset('img/gb-ribbon.png') }}">
+		</div>
 		<div id="body">
 			<div id="menu-group">
 				<div id="menu-group-inner">
@@ -86,6 +89,14 @@
 										<li><a class="list" href="#construstion">紀念合本</a></li>
 										<li><a class="list" href="#construstion">現場活動</a></li>
 									</ul>
+								</div>
+							</li>
+							<li class="menu-list list-guestbook">
+								<div class="bg"></div>
+								<div class="img"></div>
+								<div class="text">
+									<span class="ct">留言板</span>
+									<span class="et">guestbook</span>
 								</div>
 							</li>
 						</ul>
@@ -183,6 +194,7 @@
 											<li class="small">限制級作品請在封面標示為「18禁」（或向主辦單位索取18禁貼紙），亦禁止販賣給未成年，且見本不得展示出18禁內容。</li>
 											<li class="small">禁止販售任何市售商品、二手品、或是販賣權不屬於參展社團的作品。</li>
 											<li class="small">若是委託販賣，需要販售屬於其他同人誌作家的作品，社團必須取得相關授權或證明資料。</li>
+										</ul>
 										</div>
 									</div>
 								</div>
@@ -266,6 +278,22 @@
 					
 				</div>
 			</div>
+		</div>
+		<div id="guestbook">
+			<div id="guestbook-head">
+				<h1>留言板</h1>
+				<div id="guestbook-link">
+					<a class="back" href="#">
+						<span class="gicon-arrow-arrow-left"></span>
+						Back
+					</a>
+					<a class="new" href="{{ url('guestbook/new') }}">New</a>
+				</div>
+			</div>
+			<div id="guestbook-list">
+				<div id="guestbook-list-group">
+					<div id="guestbook-list-inner">
+			</div></div></div>
 		</div>
 	</div>
 	@include('share.construction');

@@ -1,4 +1,4 @@
-<script src="{{ asset('js/justfont-app-v2.min.js') }}"></script>
+<script src="{{ asset('js/justfont-app-v2.js') }}"></script>
 <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-39783774-2']);
