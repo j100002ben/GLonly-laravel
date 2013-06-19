@@ -73,6 +73,9 @@ class Guestbook_Controller extends Base_Controller {
 		$post->post_status = 'public';
 		$post->save();
 		
+		$post_id = $post->get_key();
+		$post = Post::find($post_id);
+		
 		$manage_link = get_guestbook_manage_link('post', $post->id);
 		$message = Swift_Message::newInstance('[GLonly.tw] Guestbook New Post')
 		    ->setFrom(array('server@glonly.tw'=>'GLonly Server'))
@@ -89,9 +92,9 @@ Email：{$post->post_title}
 {$post->post_body}
 ────────────────────────────────────────
 管理連結：
-{$manage_link}
+<a href="{$manage_link}">連結</a>
 EOT
-		,'text/plain');
+		,'text/html');
 		$this->mailer->send($message);
 		
 		return Redirect::to('guestbook/success');
