@@ -164,11 +164,10 @@ EOT
 		,'text/html');
 		$this->mailer->send($message);
 		
-		$reply_num = $post->replys()
+		$post->reply_num = $post->replys()
 						->where_reply_type('guestbook')
 						->where_reply_status('public')
 						->order_by('created_at', 'desc')->count();
-		$post->reply_num = $reply_num;
 		$post->save();
 		return Redirect::to('guestbook/post/' . $post_id);
 	}
@@ -215,6 +214,15 @@ EOT
 			}
 			$resource->{$prefix . '_status'} = $status;
 			$resource->save();
+			
+			if ( $prefix == 'reply' ) {
+				$post = Post::find($resource->post_id);
+				$post->reply_num = $post->replys()
+							->where_reply_type('guestbook')
+							->where_reply_status('public')
+							->order_by('created_at', 'desc')->count();
+				$post->save();
+			}
 			
 			return Redirect::to_route('guestbook.manage', 
                 array( $type, $id, $base64_encrypted_key, $base64_hash ) );
