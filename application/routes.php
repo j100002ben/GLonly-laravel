@@ -84,6 +84,46 @@ Route::get('privacy', function()
 });
 
 /*
+Route::get('guestbook/manage/link/(:any)/(:num)', function($type, $id){
+	return get_guestbook_manage_link($type, $id);
+});
+*/
+
+function get_guestbook_manage_link($type, $id){
+	$resource = null;
+	$prefix = '';
+	if ( $type == 'post' ) {
+		$resource = Post::find($id);
+	}
+	if ( $type == 'reply' ) {
+		$resource = Reply::find($id);
+	}
+	if ( ! $resource ) {
+		return Response::error('404');
+	}
+	$prefix = $type;
+	$key = Str::random(32);
+	$encrypted_key = Crypter::encrypt($key);
+	
+	$unhash_str = '';
+	$unhash_str .= '@' . $resource->id;
+	$unhash_str .= '@' . $resource->{$prefix . '_nickname'};
+	$unhash_str .= '@' . $resource->{$prefix . '_email'};
+	$unhash_str .= '@' . $resource->{$prefix . '_type'};
+	$unhash_str .= '@' . $resource->created_at;
+	
+	$hash_str = hash_hmac('sha512', $unhash_str, $key);
+	$hash = crypt($hash_str, '$6$rounds=10000$' . Str::random(16) . '$');
+	
+	return route('guestbook.manage', array(
+		$type, $id, strtr( base64_encode( $encrypted_key ), '+/=', '!_-'), 
+		strtr( base64_encode( $hash ), '+/=', '!_-') ));
+}
+
+Route::get('guestbook/manage/(:any)/(:num)/(:any)/(:any)/(:any?)', 
+   	array('as' => 'guestbook.manage', 'uses' => 'guestbook@manage') );
+
+/*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
 |--------------------------------------------------------------------------
