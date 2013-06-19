@@ -80,7 +80,7 @@ class Guestbook_Controller extends Base_Controller {
 		    ->setBcc(array('glonly@clients.poka.tw'=>'Client-GLonly'))
 		    ->setReplyTo(array('glonly@clients.poka.tw'=>'Client-GLonly'))
 		    ->setBody(<<<EOT
-{$post->post_nickname]}新增一則留言
+{$post->post_nickname}新增一則留言
 日期：{$post->created_at}
 Email：{$post->post_title}
 標題：{$post->post_title}
