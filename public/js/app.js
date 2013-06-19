@@ -98,8 +98,8 @@ var _jf = _jf || [];
 					str += data[i].post_nickname;
 					str += '</i> </div> <div class="right">';
 					str += data[i].created_at;
-					str += '</div> <div class="right"> <a class="reply" href="/guestbook/post/' + data[i].id + '">查看回應(';
-					str += data[i].reply_num + ')</a> - </div> </div> </div> </div> ';
+					str += '</div><br> - <a class="reply" href="/guestbook/post/' + data[i].id + '">查看回應(';
+					str += data[i].reply_num + ')</a> - </div> </div> </div> ';
 				}
 				$('#guestbook-list-inner').html(str);
 				if( gb_tjscroll = $('#guestbook-list-group').data('TJScroll') ){
