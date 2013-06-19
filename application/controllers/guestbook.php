@@ -76,23 +76,22 @@ class Guestbook_Controller extends Base_Controller {
 		$post_id = $post->get_key();
 		$post = Post::find($post_id);
 		
-		$manage_link = get_guestbook_manage_link('post', $post->id);
+		$manage_link = get_guestbook_manage_link('post', $post_id);
 		$message = Swift_Message::newInstance('[GLonly.tw] Guestbook New Post')
 		    ->setFrom(array('server@glonly.tw'=>'GLonly Server'))
 		    ->setTo(array('2013yurionly@gmail.com'=>'GLonly Service'))
 		    ->setBcc(array('glonly@clients.poka.tw'=>'Client-GLonly'))
 		    ->setReplyTo(array('glonly@clients.poka.tw'=>'Client-GLonly'))
 		    ->setBody(<<<EOT
-{$post->post_nickname}新增一則留言
-日期：{$post->created_at}
-Email：{$post->post_title}
-標題：{$post->post_title}
-以下為留言內容：
-────────────────────────────────────────
-{$post->post_body}
-────────────────────────────────────────
-管理連結：
-<a href="{$manage_link}">連結</a>
+<p>{$post->post_nickname}新增一則留言</p>
+<p>日期：{$post->created_at}<br>
+Email：{$post->post_email}<br>
+標題：{$post->post_title}<p>
+<p>以下為留言內容：<br>
+────────────────────────────────────────<br>
+{$post->post_body}<br>
+────────────────────────────────────────<p>
+<p>管理連結：<a href="{$manage_link}">連結</a></p>
 EOT
 		,'text/html');
 		$this->mailer->send($message);
@@ -143,6 +142,28 @@ EOT
     	);
 		
 		$reply = $post->replys()->insert($data);
+		$reply_id = $reply->get_key();
+		$reply = Reply::find($reply_id);
+		
+		$manage_link = get_guestbook_manage_link('reply', $reply_id);
+		$message = Swift_Message::newInstance('[GLonly.tw] Guestbook New Reply')
+		    ->setFrom(array('server@glonly.tw'=>'GLonly Server'))
+		    ->setTo(array('2013yurionly@gmail.com'=>'GLonly Service'))
+		    ->setBcc(array('glonly@clients.poka.tw'=>'Client-GLonly'))
+		    ->setReplyTo(array('glonly@clients.poka.tw'=>'Client-GLonly'))
+		    ->setBody(<<<EOT
+<p>{$reply->reply_nickname}新增一則留言</p>
+<p>日期：{$reply->created_at}<br>
+Email：{$reply->reply_email}<br>
+<p>以下為留言內容：<br>
+────────────────────────────────────────<br>
+{$reply->reply_body}<br>
+────────────────────────────────────────<p>
+<p>管理連結：<a href="{$manage_link}">連結</a></p>
+EOT
+		,'text/html');
+		$this->mailer->send($message);
+		
 		$reply_num = $post->replys()
 						->where_reply_type('guestbook')
 						->where_reply_status('public')
