@@ -8,7 +8,7 @@ class Guestbook_Controller extends Base_Controller {
 					->where_post_status('public')
 					->order_by('created_at', 'desc')->get();
 		
-		return json_encode( array_map( function($post){
+		return Response::json( array_map( function($post){
 			return $post->to_array();
 		}, $posts ) );
 	}

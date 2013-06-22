@@ -34,7 +34,7 @@
 								<i>{{ $reply['reply_nickname'] }}</i>
 							</div>
 							<div class="right">
-								{{ $post['created_at'] }}
+								{{ $reply['created_at'] }}
 							</div>
 						</div>
 					@endforeach
