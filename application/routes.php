@@ -38,6 +38,19 @@ Route::get('/', function()
 		->with('page_title', '');
 });
 
+Route::get('/registration', function()
+{
+	return Redirect::to('https://docs.google.com/forms/d/'.
+		'1lmKKaPaXntM9KEaDIUTjq2rlN_D4RFf_9mhBZ0kQhos/'.
+		'viewform?entry.1677042488&entry.1385487865&entry.'.
+		'1787948090&entry.505554217&entry.586857048&entry.'.
+		'1644652406=1&entry.916073990=1&entry.221816683&entry.'.
+		'225837570&entry.1318214892=%E5%90%8C%E4%BA%BA+/+'.
+		'%E4%BA%8C%E6%AC%A1%E5%89%B5%E4%BD%9C&entry.1802719544='.
+		'%E5%85%A8%E5%B9%B4%E9%BD%A1&entry.133011554='.
+		'%E6%9C%AA%E5%AE%9A&entry.785285632&entry.1133850059');
+});
+
 Route::get('news', function()
 {
 	return View::make('home.news')
