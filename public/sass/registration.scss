@@ -1,0 +1,133 @@
+@import "normalize";
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend,
+p, blockquote, th, td, iframe {
+	font-family: "Helvetica Neue",HelveticaNeue,"Helvetica-Neue",Helvetica,"BBAlpha Sans","Microsoft JhengHei","微軟正黑體",sans-serif;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+}
+
+body {
+	position: relative;
+	cursor: default;
+	background: transparent url(../img/bg2.png) scroll repeat 50% 50%;
+}
+
+.jf-active, .jf-inactive {
+	.counter {
+		opacity: 1;
+	}
+}
+
+#center-image {
+	float: right;
+	background: transparent url(../img/center-image2.png) scroll no-repeat 0 0;
+	width: 250px;
+	height: 295px;
+	margin: 0 auto;
+}
+
+#header-inner {
+	float: left;
+	position: relative;
+	margin: 80px auto 0;
+	width: 450px;
+	text-align: center;
+	
+	h1 {
+		font-size: 1.3em;
+		font-weight: 600;
+	}
+	
+	h2 {
+		font-size: 1.1em;
+		font-weight: 600;
+	}
+	
+	ul {
+		list-style: none;
+		
+		li {
+			margin: 10px 0;
+		}
+	}
+}
+
+.group {
+	width: 700px;
+	margin: 20px auto 0;
+}
+.group:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+.counter{
+	opacity: 0;
+	width: 610px;
+	margin: 0 auto;
+
+	ul.countdown {
+		list-style-type: none;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+		width: 610px;
+
+		>li {
+			display: inline-block;
+			background: url(../img/digit.png) no-repeat;
+			height:110px;
+			width: 105px;
+			padding-top: 15px;
+
+			>div {
+				font-size: 15px;
+				height: 18px;
+
+				&.countdown_num{
+					font-size: 48px;
+					height: 58px;
+				}
+			}
+
+			&.no_countdown {
+				padding-top:4px;
+				background:transparent;
+				height:110px;
+				width:180px;
+			}
+		}
+		>li {
+		    *display:inline;
+		}
+	}
+}
+
+p.info {
+	font-size: 150%;
+	width: 610px;
+	margin: 20px auto 0;
+}
