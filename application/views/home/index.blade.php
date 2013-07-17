@@ -190,7 +190,7 @@
 											<li class="small">攤位費用：一攤新台幣 $400 元。</li>
 											<li class="small">每一攤位入場人數：3人（兩人需購買場刊）。</li>
 											<li class="small">錄取方式：滿額抽籤制。</li>
-											<li class="small">報名連結：（報名開始後公布）</li>
+											<li class="small">報名連結：<a href="{{ route('registration') }}" target="_blank">連結（開新視窗）</a></li>
 											<li class="small">限制級作品請在封面標示為「18禁」（或向主辦單位索取18禁貼紙），亦禁止販賣給未成年，且見本不得展示出18禁內容。</li>
 											<li class="small">禁止販售任何市售商品、二手品、或是販賣權不屬於參展社團的作品。</li>
 											<li class="small">若是委託販賣，需要販售屬於其他同人誌作家的作品，社團必須取得相關授權或證明資料。</li>

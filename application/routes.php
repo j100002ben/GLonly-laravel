@@ -38,7 +38,7 @@ Route::get('/', function()
 		->with('page_title', '');
 });
 
-Route::get('/registration', 'home@registration');
+Route::get('/registration', array('as' => 'registration', 'uses' => 'home@registration'));
 
 Route::get('news', function()
 {
