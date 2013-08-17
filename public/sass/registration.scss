@@ -36,6 +36,13 @@ body {
 	}
 }
 
+.lang-ctrl {
+	width: 650px;
+	text-align: right;
+	margin: 0 auto;
+	margin: 20px auto 0;
+}
+
 #center-image {
 	float: right;
 	background: transparent url(../img/center-image2.png) scroll no-repeat 0 0;
@@ -44,7 +51,7 @@ body {
 	margin: 0 auto;
 }
 
-#header-inner {
+.header-inner {
 	float: left;
 	position: relative;
 	margin: 80px auto 0;
@@ -72,7 +79,7 @@ body {
 
 .group {
 	width: 700px;
-	margin: 20px auto 0;
+	margin: 10px auto 0;
 }
 .group:after {
 	visibility: hidden;
@@ -128,7 +135,7 @@ body {
 
 p.regis-link {
 	font-size: 110%;
-	width: 610px;
+	width: 700px;
 	margin: 20px auto 0;
 }
 
@@ -136,4 +143,12 @@ p.info {
 	font-size: 150%;
 	width: 610px;
 	margin: 20px auto 0;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
 }
