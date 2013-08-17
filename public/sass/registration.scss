@@ -50,20 +50,20 @@ body {
 	margin: 80px auto 0;
 	width: 450px;
 	text-align: center;
-	
+
 	h1 {
 		font-size: 1.3em;
 		font-weight: 600;
 	}
-	
+
 	h2 {
 		font-size: 1.1em;
 		font-weight: 600;
 	}
-	
+
 	ul {
 		list-style: none;
-		
+
 		li {
 			margin: 10px 0;
 		}
@@ -124,6 +124,12 @@ body {
 		    *display:inline;
 		}
 	}
+}
+
+p.regis-link {
+	font-size: 110%;
+	width: 610px;
+	margin: 20px auto 0;
 }
 
 p.info {

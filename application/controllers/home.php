@@ -39,8 +39,13 @@ class Home_Controller extends Base_Controller {
 	{
 		$time = time();
 		$start_time = strtotime("2013-08-01 00:00:00 GMT+8");
-		$end_time = strtotime("2013-08-31 00:00:00 GMT+8");
+		$end_time = strtotime("2013-08-31 23:59:59 GMT+8");
 		if ( $time > $start_time AND $time < $end_time ) {
+			return View::make('home.registration')
+				->with('start_time', $start_time)
+				->with('end_time', $end_time);
+
+			/*
 			return Redirect::to('https://docs.google.com/forms/d/'.
 				'1lmKKaPaXntM9KEaDIUTjq2rlN_D4RFf_9mhBZ0kQhos/'.
 				'viewform?entry.1677042488&entry.1385487865&entry.'.
@@ -50,10 +55,15 @@ class Home_Controller extends Base_Controller {
 				'%E4%BA%8C%E6%AC%A1%E5%89%B5%E4%BD%9C&entry.1802719544='.
 				'%E5%85%A8%E5%B9%B4%E9%BD%A1&entry.133011554='.
 				'%E6%9C%AA%E5%AE%9A&entry.785285632&entry.1133850059');
+			*/
 		} else {
-			return View::make('home.wait_registration')
-				->with('start_time', $start_time)
-				->with('end_time', $end_time);
+			if ( $time <= $start_time ) {
+				return View::make('home.wait_registration')
+					->with('start_time', $start_time)
+					->with('end_time', $end_time);
+			}else {
+				return View::make('home.finish_registration');
+			}
 		}
 	}
 
