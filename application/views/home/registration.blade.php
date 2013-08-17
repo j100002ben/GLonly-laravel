@@ -16,7 +16,7 @@
 	<!--[if gte IE 9]><!--><script src="{{ asset('js/jquery-2.0.0.min.js') }}"></script><!--<![endif]-->
 </head>
 <body>
-	<div class="lang-ctrl">
+	<div class="lang-ctrl xingothic-tc-w8">
 		Language 語言設定：
 		<select id="lang-select">
 			<option value="zh">中文</option>
@@ -57,23 +57,22 @@
 			<ul>
 			<li>2014.03.08</li>
 			<li>Y17台北市青少年育樂中心</li>
-			<li>申込期間：</li>
-			<li>2013.08.01 - 2013.08.31</li>
+			<li>申込期間：2013.08.01 - 2013.08.31</li>
 			<li>（応募者多数の場合は抽選となります）</li>
 			<li>申込みの流れ：<a href="http://i.imgur.com/GYuNOxI.png" target="_blank">リンク</a></li>
 			</ul>
 			<span style="display:none;">0123456789</span>
 		</div>
 	</div>
-	<p data-lang="zh" class="regis-link">報名表單： <a target="_blank" href="http://bit.ly/glonly-regis">http://bit.ly/glonly-regis</a> （中文）</p>
-	<p data-lang="zh" class="regis-link">海外社團： <a target="_blank" href="http://bit.ly/glonly-regis-oversea">http://bit.ly/glonly-regis-oversea</a> （日本語 / English）</p>
-	<p data-lang="en" class="hide regis-link">Registration Form： <a target="_blank" href="http://bit.ly/glonly-regis">http://bit.ly/glonly-regis</a> （Chinese 中文）</p>
-	<p data-lang="en" class="hide regis-link">Form for Oversea： <a target="_blank" href="http://bit.ly/glonly-regis-oversea">http://bit.ly/glonly-regis-oversea</a> （日本語 / English）</p>
-	<p data-lang="jp" class="hide regis-link">申込表： <a target="_blank" href="http://bit.ly/glonly-regis">http://bit.ly/glonly-regis</a> （中文）</p>
-	<p data-lang="jp" class="hide regis-link">海外サークル様はこちら： <a target="_blank" href="http://bit.ly/glonly-regis-oversea">http://bit.ly/glonly-regis-oversea</a> （日本語 / English）</p>
-	<p data-lang="zh" class="info">距離社團報名截止，還有：</p>
-	<p data-lang="en" class="hide info">Days left from closing date：</p>
-	<p data-lang="jp" class="hide info">申込締切まで，あと：</p>
+	<p data-lang="zh" class="regis-link xingothic-tc-w8">報名表單： <a target="_blank" href="http://bit.ly/glonly-regis">http://bit.ly/glonly-regis</a> （中文）</p>
+	<p data-lang="zh" class="regis-link xingothic-tc-w8">海外社團： <a target="_blank" href="http://bit.ly/glonly-regis-oversea">http://bit.ly/glonly-regis-oversea</a> （日本語 / English）</p>
+	<p data-lang="en" class="hide regis-link xingothic-tc-w8">Registration Form： <a target="_blank" href="http://bit.ly/glonly-regis">http://bit.ly/glonly-regis</a> （Chinese 中文）</p>
+	<p data-lang="en" class="hide regis-link xingothic-tc-w8">Form for Oversea： <a target="_blank" href="http://bit.ly/glonly-regis-oversea">http://bit.ly/glonly-regis-oversea</a> （日本語 / English）</p>
+	<p data-lang="jp" class="hide regis-link xingothic-tc-w8">申込表： <a target="_blank" href="http://bit.ly/glonly-regis">http://bit.ly/glonly-regis</a> （中文）</p>
+	<p data-lang="jp" class="hide regis-link xingothic-tc-w8">海外サークル様はこちら： <a target="_blank" href="http://bit.ly/glonly-regis-oversea">http://bit.ly/glonly-regis-oversea</a> （日本語 / English）</p>
+	<p data-lang="zh" class="info xingothic-tc-w8">距離社團報名截止，還有：</p>
+	<p data-lang="en" class="hide info xingothic-tc-w8">Days left from closing date：</p>
+	<p data-lang="jp" class="hide info xingothic-tc-w8">申込締切まで，あと：</p>
 	<div id="counter" class="counter xingothic-tc-w8">
 		<ul class="countdown">
 			<li><div class="countdown_num" id="countdown_day"></div><div>Days</div></li>

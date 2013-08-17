@@ -16,7 +16,7 @@
 	<!--[if gte IE 9]><!--><script src="{{ asset('js/jquery-2.0.0.min.js') }}"></script><!--<![endif]-->
 </head>
 <body>
-	<div class="lang-ctrl">
+	<div class="lang-ctrl xingothic-tc-w8">
 		Language 語言設定：
 		<select id="lang-select">
 			<option value="zh">中文</option>
@@ -65,9 +65,9 @@
 			<span style="display:none;">0123456789</span>
 		</div>
 	</div>
-	<p data-lang="zh" class="info">社團報名已截止，感謝您的支持！</p>
-	<p data-lang="en" class="info">Registration is over, thank you.</p>
-	<p data-lang="jp" class="info">社團報名已截止，感謝您的支持！</p>
+	<p data-lang="zh" class="info xingothic-tc-w8">社團報名已截止，感謝您的支持！</p>
+	<p data-lang="en" class="info xingothic-tc-w8">Registration is over, thank you.</p>
+	<p data-lang="jp" class="info xingothic-tc-w8">申込受付を終了いたしました。ご支援ありがとうございます！</p>
 	<script type="text/javascript">
 (function(window, document, undefined){
 	var $ = window.jQuery;
