@@ -72,7 +72,7 @@
 	<p data-lang="jp" class="hide regis-link xingothic-tc-w8">海外サークル様はこちら： <a target="_blank" href="http://bit.ly/glonly-regis-oversea">http://bit.ly/glonly-regis-oversea</a> （日本語 / English）</p>
 	<p data-lang="zh" class="info xingothic-tc-w8">距離社團報名截止，還有：</p>
 	<p data-lang="en" class="hide info xingothic-tc-w8">Days left from closing date：</p>
-	<p data-lang="jp" class="hide info xingothic-tc-w8">申込締切まで，あと：</p>
+	<p data-lang="jp" class="hide info xingothic-tc-w8">申込締切まで、あと：</p>
 	<div id="counter" class="counter xingothic-tc-w8">
 		<ul class="countdown">
 			<li><div class="countdown_num" id="countdown_day"></div><div>Days</div></li>
